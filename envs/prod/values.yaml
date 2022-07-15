@@ -2,7 +2,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/aws-samples/ssp-eks-workloads
+    repoURL: https://github.com/dmatthews-uturn/eks-blueprints-workloads.git
     targetRevision: deployable
   ingress:
     host: dev.shapirov.people.a2z.com

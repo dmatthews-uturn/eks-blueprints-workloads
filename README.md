@@ -16,7 +16,7 @@ To bootstrap an EKS cluster with the configuration that is contained in this rep
 argocd app create dev-apps \
     --dest-namespace argocd  \
     --dest-server https://kubernetes.default.svc  \
-    --repo https://github.com/aws-samples/ssp-eks-workloads.git \
+    --repo https://github.com/dmatthews-uturn/eks-blueprints-workloads.git \
     --path "envs/dev"
 ```
 
