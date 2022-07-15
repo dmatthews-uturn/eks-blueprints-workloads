@@ -5,4 +5,4 @@ spec:
     repoURL: https://github.com/dmatthews-uturn/eks-blueprints-workloads.git
     targetRevision: deployable
   ingress:
-    host: dmatthews.blackbelt.uturndata.com
+    host: dev.example.com
