@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: skiapp-service
+  namespace: team-burnham
 spec:
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8080
+    protocol: TCP
+  type: NodePort
   selector:
-    app: nginx
- 
+    app: skiapp
