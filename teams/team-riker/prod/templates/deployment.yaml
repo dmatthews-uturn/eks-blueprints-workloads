@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -18,3 +18,14 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: '250Mi'
+            cpu: '250m'
+          limits:
+            memory: '500Mi'
+            cpu: '500m'
+        securityContext:
+          privileged: false
+          #readOnlyRootFilesystem: false # guestbook neet to write to /var/run/apache2/apache2.pid
+          allowPrivilegeEscalation: false
